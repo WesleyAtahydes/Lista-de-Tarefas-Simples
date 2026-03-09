@@ -16,11 +16,11 @@ Esta é uma aplicação de Lista de Tarefas/Compras desenvolvida para praticar l
 
 O maior diferencial deste projeto foi a manipulação dinâmica de elementos. Em vez de apenas esconder elementos pré-existentes, o código:
 
-1. Cria novas tags (como <li> e <button>) via JavaScript.
+Cria novas tags (como <li> e <button>) via JavaScript.
+   
+Atribui classes e atributos em tempo de execução.
 
-2. Atribui classes e atributos em tempo de execução.
-
-3. Utiliza o método .appendChild() para renderizar os novos nós na árvore do DOM de forma estruturada.
+Utiliza o método .appendChild() para renderizar os novos nós na árvore do DOM de forma estruturada.
 
 ## 📸 Demonstração
 
@@ -33,6 +33,7 @@ O maior diferencial deste projeto foi a manipulação dinâmica de elementos. Em
 
 ---
 Desenvolvido por Wesley de Atahydes - www.linkedin.com/in/wesley-de-atahydes-89217013a
+
 
 
 
