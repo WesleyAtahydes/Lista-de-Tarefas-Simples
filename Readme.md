@@ -24,7 +24,8 @@ O maior diferencial deste projeto foi a manipulação dinâmica de elementos. Em
 
 ## 📸 Demonstração
 
-![Demontração](/exercicio%20lista%20de%20tarefas/assets/js/css/img/Demonstração.gif)
+![Demonstração](https://github.com/user-attachments/assets/ac9f2edc-9171-48f5-88fe-538df58b229b)
+
 
 ## 🚀 Como executar o projeto
 1. Clone este repositório: `git clone https://github.com/WesleyAtahydes/Lista-de-Tarefas-Simples.git`
@@ -32,6 +33,7 @@ O maior diferencial deste projeto foi a manipulação dinâmica de elementos. Em
 
 ---
 Desenvolvido por Wesley de Atahydes - www.linkedin.com/in/wesley-de-atahydes-89217013a
+
 
 
 
