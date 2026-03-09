@@ -27,10 +27,11 @@ O maior diferencial deste projeto foi a manipulação dinâmica de elementos. Em
 ![Demontração](/exercicio%20lista%20de%20tarefas/assets/js/css/img/Demonstração.gif)
 
 ## 🚀 Como executar o projeto
-1. Clone este repositório: `git clone https://github.com/WesleyAtahydes/nome-do-repo.git`
+1. Clone este repositório: `git clone https://github.com/WesleyAtahydes/Lista-de-Tarefas-Simples.git`
 2. Abra o arquivo `index.html` no seu navegador.
 
 ---
 Desenvolvido por Wesley de Atahydes - www.linkedin.com/in/wesley-de-atahydes-89217013a
+
 
 
