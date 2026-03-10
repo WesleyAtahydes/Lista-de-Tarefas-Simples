@@ -1,35 +1,41 @@
 const botao = document.querySelector('.botaoEnviar');
-const CampoResultado = document.querySelector('.listaDeResultados');
+const campoResultado = document.querySelector('.listaDeResultados');
 const criarUl = document.createElement('ul');
+campoResultado.appendChild(criarUl);
 
-function criarLista() {
+function criarLista(textoTarefa) {
 
     const campoInput = document.querySelector('.campoUsuário').value;
-    const CriarLi = document.createElement('li');
-    
+    const criarLi = document.createElement('li');
+    const campoInputVazio = document.querySelector('.campoUsuário');
 
-    const CriarBotaoLi = document.createElement('button');
-    CriarBotaoLi.classList.add('botaoApagar');
+    const criarBotaoLi = document.createElement('button');
+    criarBotaoLi.classList.add('botaoApagar');
 
-    CriarBotaoLi.addEventListener('click', function () {
-        const TarefaParaRemover = CriarBotaoLi.parentElement;
+    criarBotaoLi.addEventListener('click', function () {
+        const tarefaParaRemover = criarBotaoLi.parentElement;
 
-        TarefaParaRemover.remove();
+        tarefaParaRemover.remove();
+        salvarTarefas();
     });
 
+    const valorFinal = textoTarefa || campoInput;
 
-    if (campoInput === '') {
-        return alert('PREENCHA O CAMPO!!')
+
+    if (valorFinal.trim() === '') {
+        return campoInputVazio.classList.add('campoVazio');
     } else {
+        campoInputVazio.classList.remove('campoVazio');
 
-        CriarLi.textContent = campoInput;
+        criarLi.textContent = valorFinal;
 
-        criarUl.appendChild(CriarLi);
-        CriarLi.appendChild(CriarBotaoLi);
-        CriarBotaoLi.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>'
+        criarUl.appendChild(criarLi);
+        criarLi.appendChild(criarBotaoLi);
+        criarBotaoLi.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>'
 
-        CampoResultado.appendChild(criarUl);
         document.querySelector('.campoUsuário').value = '';
+        campoInput.focus();
+        salvarTarefas();
     }
 
 }
@@ -46,5 +52,29 @@ campoInput.addEventListener('keypress', function(e) {
     }
 });
 
+function salvarTarefas() {
+    const liTarefas = criarUl.querySelectorAll('li');
+    const arrayTarefas = [];
 
+    for (let tarefa of liTarefas) {
+        const texto = tarefa.firstChild?.textContent?.trim() || '';
+        if (texto) arrayTarefas.push(texto);
+    }
 
+    const tarefasJSON = JSON.stringify(arrayTarefas);
+    localStorage.setItem('tarefas', tarefasJSON);
+
+}
+
+function adicionarTarefasSalvas() {
+    const tarefas = localStorage.getItem('tarefas');
+    if (!tarefas) return;
+
+    const listaDeTarefas = JSON.parse(tarefas);
+    
+    for (let tarefa of listaDeTarefas) {
+        criarLista(tarefa);
+    }
+}
+
+adicionarTarefasSalvas();

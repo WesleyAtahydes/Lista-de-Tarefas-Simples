@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 :root {
     --primary-color:rgb(14, 66, 179);
     --primary-darker:rgb(10, 49, 133);
+    --fonte-titulo: 'Carter One', cursive;
 }
 
 * {
@@ -18,6 +17,8 @@ body {
     font-size: 1.3em;
     line-height: 1.5em;
     text-align: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -27,21 +28,40 @@ body {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 14px 20px 4px var(--primary-darker);
+    flex: 1;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.0em;
 }
 
 input, button {
     padding: 10px;
+    border: transparent;
     border-radius: 20px;
-    border: none;
     font-weight: 600;
 }
 
 .campoUsuário {
     background-color: #e9e9e9;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+
+.campoUsuário:placeholder-shown {
+    color: purple;
 }
 
 .botaoEnviar {
     cursor: pointer;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.botaoEnviar:hover {
+    background-color: #d4d4d4;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .listaDeResultados {
@@ -79,5 +99,9 @@ ul {
     gap: 10px; 
  }
 
-
+.campoVazio {
+    border: 1.5px solid rgb(231, 1, 1);
+    background-color: #fff0f0;
+    transition: border 0.3s linear;
+}
 
