@@ -16,7 +16,7 @@ Esta é uma aplicação de Lista de Tarefas/Compras desenvolvida para praticar l
 
 O maior diferencial deste projeto foi a manipulação dinâmica de elementos. Em vez de apenas esconder elementos pré-existentes, o código:
 
-Cria novas tags (como <li> e <button>) via JavaScript.
+Cria novas tags (como *li* e *button*) via JavaScript.
    
 Atribui classes e atributos em tempo de execução.
 
@@ -24,7 +24,7 @@ Utiliza o método .appendChild() para renderizar os novos nós na árvore do DOM
 
 ## 📸 Demonstração
 
-![Demonstração](https://github.com/user-attachments/assets/ac9f2edc-9171-48f5-88fe-538df58b229b)
+![Demonstração](https://github.com/user-attachments/assets/78ddb58b-4afb-4079-a4fb-b5666f9f0943)
 
 
 ## 🚀 Como executar o projeto
@@ -33,8 +33,4 @@ Utiliza o método .appendChild() para renderizar os novos nós na árvore do DOM
 
 ---
 Desenvolvido por Wesley de Atahydes - www.linkedin.com/in/wesley-de-atahydes-89217013a
-
-
-
-
 
