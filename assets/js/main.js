@@ -22,7 +22,7 @@ function criarLista(textoTarefa) {
     const valorFinal = textoTarefa || campoInput;
 
 
-    if (valorFinal.trim() === '') {
+    if (!valorFinal || valorFinal.trim() === '') {
         return campoInputVazio.classList.add('campoVazio');
     } else {
         campoInputVazio.classList.remove('campoVazio');
@@ -34,7 +34,7 @@ function criarLista(textoTarefa) {
         criarBotaoLi.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>'
 
         document.querySelector('.campoUsuário').value = '';
-        campoInput.focus();
+        document.querySelector('.campoUsuário').focus();
         salvarTarefas();
     }
 
